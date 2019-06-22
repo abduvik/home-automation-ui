@@ -1,0 +1,14 @@
+.Nav {
+  display: flex;
+
+  ul {
+    display: flex;
+    padding: 0;
+    margin: auto auto 0 0;
+    list-style: none;
+
+    li {
+      margin: 0 10px;
+    }
+  }
+}

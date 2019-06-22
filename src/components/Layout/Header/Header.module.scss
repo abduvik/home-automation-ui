@@ -1,0 +1,27 @@
+@import "../../../variables.scss";
+
+.Header {
+  box-shadow: 0 2px 12px 0 #dfe3eb;
+  background: #fff;
+  padding: 25px 15px;
+  margin: auto;
+  box-sizing: border-box;
+
+  .HeaderContainer {
+    display: flex;
+    max-width: $MAX_WIDTH;
+    margin: auto;
+  }
+
+  .AppName {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-right: 10px;
+
+    &::after {
+      content: "";
+      margin-left: 10px;
+      border-right: 1px solid #000;
+    }
+  }
+}
