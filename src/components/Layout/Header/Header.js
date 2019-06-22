@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
 export default function Header() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <header>
+      <nav>
+        <ul>
+          <li>Home Automation UI</li>
+        </ul>
+      </nav>
+    </header>
+  );
 }
