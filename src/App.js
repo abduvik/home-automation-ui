@@ -3,13 +3,13 @@ import { Route, Switch } from "react-router-dom";
 
 import "./App.module.scss";
 import Layout from "./hoc/Layout/Layout";
-import Rooms from "./containers/Rooms/Rooms";
+import RoomsDashboard from "./containers/RoomsDashboard/RoomsDashboard";
 
 function App() {
   return (
     <Layout>
       <Switch>
-        <Route path="/" exact component={Rooms} />
+        <Route path="/" exact component={RoomsDashboard} />
       </Switch>
     </Layout>
   );

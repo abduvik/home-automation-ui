@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class Rooms extends Component {
+export default class RoomsDashboard extends Component {
   render() {
     return <div>Rooms</div>;
   }
