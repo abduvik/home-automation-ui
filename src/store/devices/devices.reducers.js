@@ -1,16 +1,27 @@
-import { FETCH_DEVICE_START, FETCH_DEVICE_SUCCESS, FETCH_DEVICE_FAILED } from "./devices.actiontypes";
-
+import {
+  FETCH_DEVICES_START,
+  FETCH_DEVICES_SUCCESS,
+  FETCH_DEVICES_FAILED,
+  UPDATE_DEVICE_VALUE_START,
+  UPDATE_DEVICE_VALUE_SUCCESS,
+  UPDATE_DEVICE_VALUE_FAILED
+} from "./devices.actiontypes";
 const initialState = {};
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
-    case FETCH_DEVICE_START:
+    case FETCH_DEVICES_START:
       return { ...state };
-    case FETCH_DEVICE_SUCCESS:
+    case FETCH_DEVICES_SUCCESS:
       return { ...state };
-    case FETCH_DEVICE_FAILED:
+    case FETCH_DEVICES_FAILED:
       return { ...state };
-
+    case UPDATE_DEVICE_VALUE_START:
+      return { ...state };
+    case UPDATE_DEVICE_VALUE_SUCCESS:
+      return { ...state };
+    case UPDATE_DEVICE_VALUE_FAILED:
+      return { ...state };
     default:
       return state;
   }
