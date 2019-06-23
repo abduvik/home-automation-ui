@@ -3,6 +3,7 @@
     "4629316951": {
       "name": "Lights",
       "has_switch": true,
+      "icon":"",
       "controls": {
         "9943131538": {
           "name": "Intensity",
@@ -17,6 +18,7 @@
     "1409599664": {
       "name": "Fan",
       "has_switch": true,
+      "icon":"",
       "controls": {
         "0630687293": {
           "name": "Intensity",
@@ -42,6 +44,7 @@
     "8864944773": {
       "name": "Cleaner",
       "has_switch": true,
+      "icon":"",
       "controls": {
         "5880650586": {
           "name": "Intensity",
@@ -67,6 +70,7 @@
     "7851085670": {
       "name": "Air Conditioner",
       "has_switch": true,
+      "icon":"",
       "controls": {
         "4276924312": {
           "name": "Mode",

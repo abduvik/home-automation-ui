@@ -3,11 +3,13 @@
     "7644289570": {
       "name": "Lights",
       "switch": true,
+      "icon":"",
       "controls": null
     },
     "5426138347": {
       "name": "Fan",
       "switch": true,
+      "icon":"",
       "controls": {
         "3895380507": {
           "name": "Intensity",
@@ -33,6 +35,7 @@
     "8572565781": {
       "name": "Heater",
       "switch": false,
+      "icon":"",
       "controls": {
         "0601482435": {
           "name": "Temperature",
@@ -47,6 +50,7 @@
     "5555041817": {
       "name": "Clothes Washer",
       "switch": true,
+      "icon":"",
       "controls": {
         "8212735126": {
           "name": "Mode",

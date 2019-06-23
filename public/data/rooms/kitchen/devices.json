@@ -3,11 +3,13 @@
     "3911949132": {
       "name": "Lights",
       "switch": true,
+      "icon":"",
       "controls": null
     },
     "6498088791": {
       "name": "Fan",
       "switch": true,
+      "icon":"",
       "controls": {
         "6560479562": {
           "name": "Intensity",
@@ -33,6 +35,7 @@
     "5965275011": {
       "name": "Coffee Machine",
       "switch": false,
+      "icon":"",
       "controls": {
         "1092468964": {
           "name": "Coffee Type",
@@ -58,6 +61,7 @@
     "7044565353": {
       "name": "Dish Washer",
       "switch": true,
+      "icon":"",
       "controls": {
         "1092468964": {
           "name": "Mode",

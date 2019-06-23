@@ -66,3 +66,64 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Data Heirarchy
+
+- Rooms -> Devices -> Controls
+- Each room has: name, icon fields
+- Each Device has: name, icon, switch (full system switch)
+  {
+    "name": "Clothes Washer",
+    "switch": true,
+    "icon":""
+  }
+
+- If controls is null then it is only on/off control
+- Controls types available: mode (select), temperature (number), scale (scale)
+- Each Control has these as common:
+  {
+    "name": "Intensity",
+    "type": "scale",
+    "value": 20
+  }
+
+- Mode Control
+  {
+    "name": "Intensity",
+    "type": "mode",
+    "value": "low",
+    "options": {
+        "low": {
+        "name": "Low",
+        "icon": "" (optional: Text would appear instead of the icon)
+        },
+        "medium": {
+        "name": "Medium",
+        "icon": ""
+        },
+        "high": {
+        "name": "High",
+        "icon": ""
+        }
+    }
+  }
+
+- Temperature Control
+ {
+    "name": "Temperature",
+    "type": "temperature",
+    "unit": "c", (c or f)
+    "value": 18,
+    "min": 16,
+    "max": 30
+}
+
+- Scale control
+{
+    "name": "Intensity",
+    "type": "scale",
+    "value": 20,
+    "min": 0,
+    "max": 100,
+    "step": 10
+}
