@@ -1,0 +1,120 @@
+{
+  "devices": {
+    "8220814373": {
+      "name": "Lights",
+      "has_switch": true,
+      "controls": {
+        "8774176610": {
+          "name": "Intensity",
+          "type": "scale",
+          "value": 20,
+          "min": 0,
+          "max": 100,
+          "step": 10
+        }
+      }
+    },
+    "5523004316": {
+      "name": "Fan",
+      "has_switch": true,
+      "controls": {
+        "4956896384": {
+          "name": "Intensity",
+          "type": "mode",
+          "value": "low",
+          "options": {
+            "low": {
+              "name": "Low",
+              "icon": ""
+            },
+            "medium": {
+              "name": "Medium",
+              "icon": ""
+            },
+            "high": {
+              "name": "High",
+              "icon": ""
+            }
+          }
+        }
+      }
+    },
+    "1369554512": {
+      "name": "Cleaner",
+      "has_switch": true,
+      "controls": {
+        "0510865880": {
+          "name": "Intensity",
+          "type": "mode",
+          "value": "low",
+          "options": {
+            "low": {
+              "name": "Low",
+              "icon": ""
+            },
+            "medium": {
+              "name": "Medium",
+              "icon": ""
+            },
+            "high": {
+              "name": "High",
+              "icon": ""
+            }
+          }
+        }
+      }
+    },
+    "3732512577": {
+      "name": "Air Conditioner",
+      "has_switch": true,
+      "controls": {
+        "3441592468": {
+          "name": "Mode",
+          "type": "mode",
+          "value": "cold",
+          "options": {
+            "cold": {
+              "name": "Cold",
+              "icon": ""
+            },
+            "hot": {
+              "name": "Hot",
+              "icon": ""
+            },
+            "fan": {
+              "name": "Fan",
+              "icon": ""
+            }
+          }
+        },
+        "4647664240": {
+          "name": "Temperature",
+          "type": "temperature",
+          "unit": "c",
+          "value": 18,
+          "min": 16,
+          "max": 30
+        },
+        "2024549215": {
+          "name": "Vane",
+          "type": "mode",
+          "value": "cold",
+          "options": {
+            "top": {
+              "name": "Top"
+            },
+            "middle": {
+              "name": "Middle"
+            },
+            "bottom": {
+              "name": "Bottom"
+            },
+            "swing": {
+              "name": "Swing"
+            }
+          }
+        }
+      }
+    }
+  }
+}

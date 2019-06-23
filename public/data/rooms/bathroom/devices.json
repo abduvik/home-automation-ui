@@ -1,0 +1,73 @@
+{
+  "devices": {
+    "7644289570": {
+      "name": "Lights",
+      "switch": true,
+      "controls": null
+    },
+    "5426138347": {
+      "name": "Fan",
+      "switch": true,
+      "controls": {
+        "3895380507": {
+          "name": "Intensity",
+          "type": "mode",
+          "value": "medium",
+          "options": {
+            "low": {
+              "name": "Low",
+              "icon": ""
+            },
+            "medium": {
+              "name": "Medium",
+              "icon": ""
+            },
+            "high": {
+              "name": "High",
+              "icon": ""
+            }
+          }
+        }
+      }
+    },
+    "8572565781": {
+      "name": "Heater",
+      "switch": false,
+      "controls": {
+        "0601482435": {
+          "name": "Temperature",
+          "type": "temperature",
+          "unit": "c",
+          "value": 35,
+          "min": 30,
+          "max": 60
+        }
+      }
+    },
+    "5555041817": {
+      "name": "Clothes Washer",
+      "switch": true,
+      "controls": {
+        "8212735126": {
+          "name": "Mode",
+          "type": "mode",
+          "value": "fast",
+          "options": {
+            "slow": {
+              "name": "Slow",
+              "icon": ""
+            },
+            "fast": {
+              "name": "Fast",
+              "icon": ""
+            },
+            "intense": {
+              "name": "Intense",
+              "icon": ""
+            }
+          }
+        }
+      }
+    }
+  }
+}

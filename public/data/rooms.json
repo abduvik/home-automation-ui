@@ -1,0 +1,28 @@
+{
+  "rooms": {
+    "living-room": {
+      "name": "Living Room",
+      "icon": ""
+    },
+    "kitchen": {
+      "name": "Kitchen",
+      "icon": ""
+    },
+    "bedroom": {
+      "name": "Bedroom",
+      "icon": ""
+    },
+    "bathroom": {
+      "name": "Bathroom",
+      "icon": ""
+    },
+    "study-room": {
+      "name": "Study Room",
+      "icon": ""
+    },
+    "dining-room": {
+      "name": "Dining Room",
+      "icon": ""
+    }
+  }
+}

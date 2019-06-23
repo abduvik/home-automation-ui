@@ -1,0 +1,84 @@
+{
+  "devices": {
+    "3911949132": {
+      "name": "Lights",
+      "switch": true,
+      "controls": null
+    },
+    "6498088791": {
+      "name": "Fan",
+      "switch": true,
+      "controls": {
+        "6560479562": {
+          "name": "Intensity",
+          "type": "mode",
+          "value": "medium",
+          "options": {
+            "low": {
+              "name": "Low",
+              "icon": ""
+            },
+            "medium": {
+              "name": "Medium",
+              "icon": ""
+            },
+            "high": {
+              "name": "High",
+              "icon": ""
+            }
+          }
+        }
+      }
+    },
+    "5965275011": {
+      "name": "Coffee Machine",
+      "switch": false,
+      "controls": {
+        "1092468964": {
+          "name": "Coffee Type",
+          "type": "mode",
+          "value": null,
+          "options": {
+            "american": {
+              "name": "American",
+              "icon": ""
+            },
+            "expresso": {
+              "name": "Expresso",
+              "icon": ""
+            },
+            "latte": {
+              "name": "Latte",
+              "icon": ""
+            }
+          }
+        }
+      }
+    },
+    "7044565353": {
+      "name": "Dish Washer",
+      "switch": true,
+      "controls": {
+        "1092468964": {
+          "name": "Mode",
+          "type": "mode",
+          "value": "fast",
+          "options": {
+            "slow": {
+              "name": "Slow",
+              "icon": ""
+            },
+            "fast": {
+              "name": "Fast",
+              "icon": ""
+            },
+            "intense": {
+              "name": "Intense",
+              "icon": ""
+            }
+          }
+        }
+      }
+    }
+  }
+}

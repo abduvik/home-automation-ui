@@ -1,0 +1,68 @@
+{
+  "devices": {
+    "4044421242": {
+      "name": "Lights",
+      "has_switch": true,
+      "controls": {
+        "1227937049": {
+          "name": "Intensity",
+          "type": "scale",
+          "value": 20,
+          "min": 0,
+          "max": 100,
+          "step": 10
+        }
+      }
+    },
+    "1921554376": {
+      "name": "Fan",
+      "has_switch": true,
+      "controls": {
+        "1783283187": {
+          "name": "Intensity",
+          "type": "mode",
+          "value": "low",
+          "options": {
+            "low": {
+              "name": "Low",
+              "icon": ""
+            },
+            "medium": {
+              "name": "Medium",
+              "icon": ""
+            },
+            "high": {
+              "name": "High",
+              "icon": ""
+            }
+          }
+        }
+      }
+    },
+    "1699406707": {
+      "name": "Air Conditioner",
+      "has_switch": true,
+      "controls": {
+        "5376976379": {
+          "name": "Mode",
+          "type": "mode",
+          "value": "cold",
+          "options": {
+            "cold": {
+              "name": "Cold",
+              "icon": ""
+            },
+            "hot": {
+              "name": "Hot",
+              "icon": ""
+            },
+            "fan": {
+              "name": "Fan",
+              "icon": ""
+            }
+          }
+        }
+      }
+    }
+  }
+}
