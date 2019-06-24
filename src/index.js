@@ -5,11 +5,12 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import thunk from "redux-thunk";
 
+import "./styles/style.scss";
+
+
 import App from "./App";
 import roomsReducers from "./store/rooms/rooms.reducers";
 import devicesReducers from "./store/devices/devices.reducers";
-
-import "./style.scss";
 
 import * as serviceWorker from "./serviceWorker";
 
