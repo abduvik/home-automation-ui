@@ -10,7 +10,7 @@ import classes from "./SideDrawer.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWindowClose } from "@fortawesome/free-solid-svg-icons";
 
-class SideDrawer extends Component {
+export class SideDrawer extends Component {
   static propTypes = {
     isOpen: PropTypes.bool
   };

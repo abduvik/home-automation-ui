@@ -6,7 +6,7 @@ import SideDrawer from "../../containers/SideDrawer/SideDrawer";
 
 import classes from "./Layout.module.scss";
 
-class Layout extends Component {
+export class Layout extends Component {
   static propTypes = {
     isSideDrawerOpen: PropTypes.bool
   };

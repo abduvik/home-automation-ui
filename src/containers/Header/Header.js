@@ -10,7 +10,7 @@ import NavigationItem from "./../../components/Layout/Navigation/NavigationItem/
 
 import classes from "./Header.module.scss";
 
-class Header extends Component {
+export class Header extends Component {
   static propTypes = {
     toggleSideDrawer: PropTypes.func
   };
