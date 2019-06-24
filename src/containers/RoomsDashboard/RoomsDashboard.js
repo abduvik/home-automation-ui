@@ -13,10 +13,14 @@ export class RoomsDashboard extends Component {
   };
 
   componentDidMount() {
-    this.props.fetchRooms();
+    if (this.props.fetchRooms) {
+      this.props.fetchRooms();
+    }
   }
 
   render() {
+    if (!this.props.rooms) return null;
+
     return (
       <div className={classes.Row}>
         {Object.entries(this.props.rooms).map(roomData => (
