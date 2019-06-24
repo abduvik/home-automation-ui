@@ -4,13 +4,17 @@ import { Route, Switch } from "react-router-dom";
 import "./App.module.scss";
 import Layout from "./hoc/Layout/Layout";
 import RoomsDashboard from "./containers/RoomsDashboard/RoomsDashboard";
-import Room from "./containers/RoomsDashboard/Room/Room";
+import asyncComponent from "./hoc/asyncComponent/asyncComponent";
 
 function App() {
+  const AsyncRoomsDevices = asyncComponent(() =>
+    import("./containers/RoomsDashboard/Room/RoomDevices")
+  );
+  
   return (
     <Layout>
       <Switch>
-        <Route path="/room/:id" exact component={Room} />
+        <Route path="/room/:id" exact component={AsyncRoomsDevices} />
         <Route path="/" exact component={RoomsDashboard} />
       </Switch>
     </Layout>
