@@ -127,3 +127,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
     "max": 100,
     "step": 10
 }
+
+
+APIs are stores in utils/apis and axios.js is the main creator of axios, the base_uri is store in config.js
