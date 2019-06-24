@@ -1,18 +1,50 @@
-.SideDrawer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  background-color: #fff;
-  box-shadow: 0 2px 12px 0 #dfe3eb;
-  padding: 20px;
-  box-sizing: border-box;
-  min-width: 250px;
+@import "../../../styles/mixins";
 
-  .Title {
-    font-weight: bold;
-    border-bottom: 1px solid;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
+.SideDrawerContainer {
+  display: block;
+
+  @include not-mobile-view {
+    display: none;
+  }
+
+  .SideDrawer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 0 2px 12px 0 #dfe3eb;
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 250px;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform ease-in-out 300ms;
+
+    .Title {
+      font-weight: bold;
+      border-bottom: 1px solid;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+    }
+  }
+
+  @include mobile-view {
+    &.Open {
+      &::after {
+        content: "";
+        background: #000;
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.3;
+      }
+      .SideDrawer {
+        transform: translateX(0);
+      }
+    }
   }
 }

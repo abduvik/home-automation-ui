@@ -1,4 +1,5 @@
 @import "../../../styles/variables";
+@import "../../../styles/mixins";
 
 .Header {
   box-shadow: 0 2px 12px 0 #dfe3eb;
@@ -21,6 +22,21 @@
       content: "";
       margin-left: 10px;
       border-right: 1px solid #000;
+    }
+  }
+
+  .MenuBtn {
+    display: none;
+    margin-left: auto;
+  }
+
+  @include mobile-view {
+    .Navigation {
+      display: none;
+    }
+
+    .MenuBtn {
+      display: block;
     }
   }
 }

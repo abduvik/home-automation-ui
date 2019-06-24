@@ -9,10 +9,15 @@ export default function Header() {
     <header className={classes.Header}>
       <div className={classes.HeaderContainer}>
         <div className={classes.AppName}>Home Automation UI</div>
-        <Navigation>
-          <NavigationItem>Rooms</NavigationItem>
-          <NavigationItem>Github</NavigationItem>
-        </Navigation>
+        <div className={classes.Navigation}>
+          <Navigation>
+            <NavigationItem>Rooms</NavigationItem>
+            <NavigationItem>Github</NavigationItem>
+          </Navigation>
+        </div>
+        <div className={classes.MenuBtn}>
+          <button>Menu</button>
+        </div>
       </div>
     </header>
   );

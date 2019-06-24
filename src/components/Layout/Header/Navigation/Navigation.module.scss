@@ -1,3 +1,5 @@
+@import "../../../../styles/mixins";
+
 .Nav {
   display: flex;
 
@@ -10,6 +12,15 @@
 
     li {
       margin: 0 10px;
+    }
+  }
+
+  @include mobile-view {
+    ul {
+      flex-direction: column;
+      li{
+        margin: 10px 0;
+      }
     }
   }
 }
