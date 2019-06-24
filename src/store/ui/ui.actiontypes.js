@@ -1,0 +1,1 @@
+export const TOGGLE_SIDEDRAWER = "[UI] TOGGLE_SIDEDRAWER";

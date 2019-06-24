@@ -7,10 +7,11 @@ import thunk from "redux-thunk";
 
 import "./styles/style.scss";
 
-
 import App from "./App";
+
 import roomsReducers from "./store/rooms/rooms.reducers";
 import devicesReducers from "./store/devices/devices.reducers";
+import uiReducers from "./store/ui/ui.reducers";
 
 import * as serviceWorker from "./serviceWorker";
 
@@ -24,7 +25,8 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 // Combine App Reducers
 const rootReduce = combineReducers({
   rooms: roomsReducers,
-  devices: devicesReducers
+  devices: devicesReducers,
+  ui: uiReducers
 });
 
 // Create the Redux store
