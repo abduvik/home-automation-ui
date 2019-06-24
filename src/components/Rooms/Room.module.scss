@@ -1,0 +1,28 @@
+@import "../../styles/utils/utils";
+
+.Room {
+  display: flex;
+  border-radius: 6px;
+  padding: 30px 20px;
+  box-shadow: 0 2px 12px 0 $LIGHT_SHADOW;
+  box-sizing: border-box;
+
+  .Title {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  .Icon {
+    margin-left: auto;
+    font-size: 8rem;
+    color: #00bcd4;
+
+    @include tablet-view {
+      font-size: 5rem;
+    }
+
+    @include mobile-view {
+      font-size: 4rem;
+    }
+  }
+}

@@ -4,16 +4,20 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import thunk from "redux-thunk";
-
-import "./styles/style.scss";
-
-import App from "./App";
-
+import { library } from "@fortawesome/fontawesome-svg-core";
 import roomsReducers from "./store/rooms/rooms.reducers";
 import devicesReducers from "./store/devices/devices.reducers";
 import uiReducers from "./store/ui/ui.reducers";
-
 import * as serviceWorker from "./serviceWorker";
+import fontawesomeIcons from "./utils/fontawesome.icons";
+import App from "./App";
+
+import "./styles/style.scss";
+
+/**
+ * Supported Fontawesome Icons for Offline usage
+ */
+library.add(fontawesomeIcons);
 
 /**
  * Redux Setup
