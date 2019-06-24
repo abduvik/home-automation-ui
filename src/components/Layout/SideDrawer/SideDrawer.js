@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types'
-import Navigation from "../Header/Navigation/Navigation";
-import NavigationItem from "./../Header/Navigation/NavigationItem/NavigationItem";
+import Navigation from './../Navigation/Navigation';
+import NavigationItem from './../Navigation/NavigationItem/NavigationItem';
 
 import classes from "./SideDrawer.module.scss";
 

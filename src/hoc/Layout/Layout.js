@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
-import Header from "./../../components/Layout/Header/Header";
 
 import classes from "./Layout.module.scss";
+import { Header } from './../../containers/Header/Header';
 import SideDrawer from "../../components/Layout/SideDrawer/SideDrawer";
 
 export default function Layout(props) {
