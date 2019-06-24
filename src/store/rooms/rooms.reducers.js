@@ -1,6 +1,8 @@
-import { FETCH_ROOMS_START, FETCH_ROOMS_SUCCESS, FETCH_ROOMS_FAILED } from './rooms.actiontypes';
+import { FETCH_ROOMS_START, FETCH_ROOMS_SUCCESS, FETCH_ROOMS_FAILED } from "./rooms.actiontypes";
 
-const initialState = {};
+const initialState = {
+  rooms: {}
+};
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
@@ -8,7 +10,10 @@ export default (state = initialState, { type, payload }) => {
       return { ...state };
 
     case FETCH_ROOMS_SUCCESS:
-      return { ...state };
+      return {
+        ...state,
+        rooms: payload.rooms
+      };
 
     case FETCH_ROOMS_FAILED:
       return { ...state };
