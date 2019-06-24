@@ -8,7 +8,7 @@ export default function Layout(props) {
   return (
     <Fragment>
       <Header />
-      <SideDrawer isOpen={true} />
+      <SideDrawer isOpen={false} />
       <main className={classes.Main}>{props.children}</main>
     </Fragment>
   );

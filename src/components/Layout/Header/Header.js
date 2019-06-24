@@ -1,8 +1,11 @@
 import React from "react";
 import Navigation from "./Navigation/Navigation";
 import NavigationItem from "./Navigation/NavigationItem/NavigationItem";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 import classes from "./Header.module.scss";
+import Button from './../../UI/Button/Button';
 
 export default function Header() {
   return (
@@ -16,7 +19,9 @@ export default function Header() {
           </Navigation>
         </div>
         <div className={classes.MenuBtn}>
-          <button>Menu</button>
+          <Button>
+            <FontAwesomeIcon icon={faBars} />
+          </Button>
         </div>
       </div>
     </header>
