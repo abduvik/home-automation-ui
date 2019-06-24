@@ -1,7 +1,8 @@
 @import "../../styles/utils/utils";
 
 .Main {
-    max-width: $MAX_WIDTH;
-    margin: auto;
-    padding: 20px 0;
+  max-width: $MAX_WIDTH;
+  margin: auto;
+  padding: 20px 15px;
+  box-sizing: content-box;
 }
