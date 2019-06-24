@@ -1,4 +1,4 @@
-@import "../../../styles/mixins";
+@import "../../../styles/utils/utils";
 
 .SideDrawerContainer {
   display: block;
@@ -13,7 +13,7 @@
     left: 0;
     height: 100vh;
     background-color: #fff;
-    box-shadow: 0 2px 12px 0 #dfe3eb;
+    box-shadow: 0 2px 12px 0 $DARK_SHADOW;
     padding: 20px;
     box-sizing: border-box;
     min-width: 250px;

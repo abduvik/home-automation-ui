@@ -1,8 +1,7 @@
-@import "../../../styles/variables";
-@import "../../../styles/mixins";
+@import "../../../styles/utils/utils";
 
 .Header {
-  box-shadow: 0 2px 12px 0 #dfe3eb;
+  box-shadow: 0 2px 12px 0 $LIGHT_SHADOW;
   background: #fff;
   padding: 25px 15px;
   margin: auto;
