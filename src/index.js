@@ -35,7 +35,8 @@ const store = createStore(rootReduce, composeEnhancers(applyMiddleware(thunk)));
 /**
  * The application JSX code and creation
  * Combine Redux and React-Router with the Application
- */ 
+ */
+
 const app = (
   <Provider store={store}>
     <BrowserRouter>

@@ -1,11 +1,16 @@
+import { TOGGLE_SIDEDRAWER } from "./ui.actiontypes";
 
-import { TOGGLE_SIDEDRAWER } from './ui.actiontypes';
-const initialState = {};
+const initialState = {
+  openSideDrawer: false
+};
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
     case TOGGLE_SIDEDRAWER:
-      return { ...state };
+      return {
+        ...state,
+        openSideDrawer: !state.openSideDrawer
+      };
     default:
       return state;
   }

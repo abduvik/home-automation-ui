@@ -1,4 +1,4 @@
-@import "../../../styles/utils/utils";
+@import "../../styles/utils/utils";
 
 .SideDrawerContainer {
   display: block;
@@ -27,6 +27,18 @@
       margin-bottom: 10px;
       padding-bottom: 5px;
     }
+  }
+
+  .CloseDrawerBtn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    color: #fff;
+    text-shadow: 0 0 #3e3e3e;
+    border: 0;
+    font-size: 3.5rem;
+    padding: 0;
   }
 
   @include mobile-view {

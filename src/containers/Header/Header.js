@@ -1,17 +1,18 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { toggleSideDrawer } from "./../../store/ui/ui.actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import Button from './../../components/UI/Button/Button';
-import Navigation from './../../components/Layout/Navigation/Navigation';
-import NavigationItem from './../../components/Layout/Navigation/NavigationItem/NavigationItem';
+import Button from "./../../components/UI/Button/Button";
+import Navigation from "./../../components/Layout/Navigation/Navigation";
+import NavigationItem from "./../../components/Layout/Navigation/NavigationItem/NavigationItem";
 
 import classes from "./Header.module.scss";
 
-export class Header extends Component {
+class Header extends Component {
   static propTypes = {
-    prop: PropTypes
+    toggleSideDrawer: PropTypes.func
   };
 
   render() {
@@ -26,7 +27,7 @@ export class Header extends Component {
             </Navigation>
           </div>
           <div className={classes.MenuBtn}>
-            <Button>
+            <Button onClick={this.props.toggleSideDrawer}>
               <FontAwesomeIcon icon={faBars} />
             </Button>
           </div>
@@ -36,11 +37,8 @@ export class Header extends Component {
   }
 }
 
-const mapStateToProps = state => ({});
+const mapDispatchToProps = {
+  toggleSideDrawer
+};
 
-const mapDispatchToProps = {};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Header);
+export default connect(null, mapDispatchToProps)(Header);
