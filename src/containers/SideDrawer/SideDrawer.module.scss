@@ -38,29 +38,29 @@
     border: 0;
     font-size: 3.5rem;
     padding: 0;
+    visibility: hidden;
   }
 
   @include mobile-view {
-    &::after {
-      content: "";
-      background: #000;
-      width: 100vw;
-      height: 100vh;
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      opacity: 0.3;
-      visibility: hidden;
-    }
-
     &.Open {
       &::after {
-        visibility: visible;
+        content: "";
+        background: #000;
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0.3;
       }
 
       .SideDrawer {
         transform: translateX(0);
+      }
+
+      .CloseDrawerBtn {
+        visibility: visible;
       }
     }
   }
