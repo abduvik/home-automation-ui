@@ -1,0 +1,10 @@
+@import "../../styles/utils/utils";
+
+.Device {
+  display: flex;
+  border-radius: 6px;
+  padding: 30px 20px;
+  box-shadow: 0 2px 12px 0 $LIGHT_SHADOW;
+  box-sizing: border-box;
+  color: #000;
+}

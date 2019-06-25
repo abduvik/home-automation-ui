@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import ControlsSwitcher from "./ControlsSwitcher/ControlsSwitcher";
 
+import classes from "./Device.module.scss";
+
 function Device(props) {
   if (!props.device) return;
 
@@ -11,12 +13,18 @@ function Device(props) {
     deviceControls = Object.entries(props.device.controls).map(device => {
       const deviceId = device[0];
       const deviceData = device[1];
-      return <ControlsSwitcher key={deviceId} deviceId={deviceId} deviceData={deviceData} />;
+      return (
+        <ControlsSwitcher
+          key={deviceId}
+          deviceId={deviceId}
+          deviceData={deviceData}
+        />
+      );
     });
   }
 
   return (
-    <div>
+    <div className={classes.Device}>
       <div>
         <div>{props.device.icon}</div>
         <div>

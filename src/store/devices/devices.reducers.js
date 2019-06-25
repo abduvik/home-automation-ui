@@ -14,7 +14,10 @@ const initialState = {
 export default (state = initialState, { type, payload }) => {
   switch (type) {
     case FETCH_DEVICES_START:
-      return { ...state };
+      return {
+        ...state,
+        devices: {}
+      };
     case FETCH_DEVICES_SUCCESS:
       return {
         ...state,

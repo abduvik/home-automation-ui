@@ -1,0 +1,28 @@
+@import "../../../styles/utils/utils";
+
+.RoomDevices {
+  column-count: 2;
+  column-gap: 1em;
+  margin-top: 1rem;
+
+  .Column {
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+  }
+
+  @include mobile-view {
+    column-count: 1;
+  }
+}
+
+.BackLink {
+  text-decoration: none;
+  color: #000;
+  font-size: .8rem;
+
+  span {
+    margin-left: 5px;
+    font-weight: bold;
+  }
+}

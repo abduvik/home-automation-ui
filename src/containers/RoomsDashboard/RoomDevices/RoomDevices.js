@@ -4,6 +4,9 @@ import { connect } from "react-redux";
 import { fetchRoomDevices } from "./../../../store/devices/devices.actions";
 import Device from "./../../../components/Device/Device";
 import { NavLink } from "react-router-dom";
+import classes from "./RoomDevices.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 export class RoomDevices extends Component {
   static propTypes = {
@@ -31,16 +34,21 @@ export class RoomDevices extends Component {
 
     return (
       <Fragment>
-        <NavLink to="/">Back to Rooms</NavLink>
-        {Object.entries(this.props.devices).map(device => {
-          const deviceId = device[0]
-          const deviceData = device[1]
-          return (
-            <div key={deviceId}>
-              <Device deviceId={deviceId} device={deviceData} />
-            </div>
-          );
-        })}
+        <NavLink to="/" className={classes.BackLink}>
+          <FontAwesomeIcon icon={faChevronLeft} />
+          <span>Back to Rooms</span>
+        </NavLink>
+        <div className={classes.RoomDevices}>
+          {Object.entries(this.props.devices).map(device => {
+            const deviceId = device[0];
+            const deviceData = device[1];
+            return (
+              <div key={deviceId} className={classes.Column}>
+                <Device deviceId={deviceId} device={deviceData} />
+              </div>
+            );
+          })}
+        </div>
       </Fragment>
     );
   }

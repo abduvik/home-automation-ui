@@ -28,7 +28,7 @@
     "dining-room": {
       "name": "Dining Room",
       "icon": "utensils",
-      "devicesCount": 4
+      "devicesCount": 3
     }
   }
 }
