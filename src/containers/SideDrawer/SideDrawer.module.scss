@@ -8,7 +8,7 @@
   }
 
   .SideDrawer {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -41,18 +41,24 @@
   }
 
   @include mobile-view {
+    &::after {
+      content: "";
+      background: #000;
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      opacity: 0.3;
+      visibility: hidden;
+    }
+
     &.Open {
       &::after {
-        content: "";
-        background: #000;
-        width: 100vw;
-        height: 100vh;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0.3;
+        visibility: visible;
       }
+
       .SideDrawer {
         transform: translateX(0);
       }
