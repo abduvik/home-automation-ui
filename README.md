@@ -130,3 +130,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 
 APIs are stores in utils/apis and axios.js is the main creator of axios, the base_uri is store in config.js
+
+Device control type must be added as export const in utils/deviceControls.types.js
+Device control type should be added to the controlsswitcher component in 
+  - /src/components/Device/ControlsSwitcher/ControlsSwitcher.js
+Device control render code should be added in components/Device/Controls

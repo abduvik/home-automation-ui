@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { fetchRoomDevices } from "./../../../store/devices/devices.actions";
 import Device from "./../../../components/Device/Device";
+import { NavLink } from "react-router-dom";
 
 export class RoomDevices extends Component {
   static propTypes = {
@@ -28,11 +29,20 @@ export class RoomDevices extends Component {
   render() {
     if (!this.props.devices) return null;
 
-    return Object.entries(this.props.devices).map(deviceData => (
-      <div key={deviceData[0]}>
-        <Device deviceId={deviceData[1]} device={deviceData[1]} />
-      </div>
-    ));
+    return (
+      <Fragment>
+        <NavLink to="/">Back to Rooms</NavLink>
+        {Object.entries(this.props.devices).map(device => {
+          const deviceId = device[0]
+          const deviceData = device[1]
+          return (
+            <div key={deviceId}>
+              <Device deviceId={deviceId} device={deviceData} />
+            </div>
+          );
+        })}
+      </Fragment>
+    );
   }
 }
 
