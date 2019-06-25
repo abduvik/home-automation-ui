@@ -2,7 +2,7 @@
   "devices": {
     "4629316951": {
       "name": "Lights",
-      "has_switch": true,
+      "switch": true,
       "icon":"",
       "controls": {
         "9943131538": {
@@ -17,7 +17,7 @@
     },
     "1409599664": {
       "name": "Fan",
-      "has_switch": true,
+      "switch": true,
       "icon":"",
       "controls": {
         "0630687293": {
@@ -43,7 +43,7 @@
     },
     "8864944773": {
       "name": "Cleaner",
-      "has_switch": true,
+      "switch": true,
       "icon":"",
       "controls": {
         "5880650586": {
@@ -69,7 +69,7 @@
     },
     "7851085670": {
       "name": "Air Conditioner",
-      "has_switch": true,
+      "switch": true,
       "icon":"",
       "controls": {
         "4276924312": {

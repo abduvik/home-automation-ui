@@ -1,7 +1,10 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { fetchRoomDevices } from "./../../../store/devices/devices.actions";
+import {
+  fetchRoomDevices,
+  toggleDeviceSwitch
+} from "./../../../store/devices/devices.actions";
 import Device from "./../../../components/Device/Device";
 import { NavLink } from "react-router-dom";
 import classes from "./RoomDevices.module.scss";
@@ -29,6 +32,10 @@ export class RoomDevices extends Component {
     }
   }
 
+  toggleDeviceSwitch = deviceId => {
+    this.props.toggleDeviceSwitch(deviceId);
+  };
+
   render() {
     if (!this.props.devices) return null;
 
@@ -44,7 +51,11 @@ export class RoomDevices extends Component {
             const deviceData = device[1];
             return (
               <div key={deviceId} className={classes.Column}>
-                <Device deviceId={deviceId} device={deviceData} />
+                <Device
+                  deviceId={deviceId}
+                  device={deviceData}
+                  onToggleDeviceSwitch={() => this.toggleDeviceSwitch(deviceId)}
+                />
               </div>
             );
           })}
@@ -59,7 +70,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  fetchRoomDevices
+  fetchRoomDevices,
+  toggleDeviceSwitch
 };
 
 export default connect(

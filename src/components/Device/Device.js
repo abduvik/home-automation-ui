@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import ControlsSwitcher from "./ControlsSwitcher/ControlsSwitcher";
 
 import classes from "./Device.module.scss";
+import Switch from "./../UI/Switch/Switch";
 
 function Device(props) {
   if (!props.device) return;
@@ -25,12 +26,12 @@ function Device(props) {
 
   return (
     <div className={classes.Device}>
-      <div>
+      <div className={classes.Header}>
         <div>{props.device.icon}</div>
-        <div>
-          <div>{props.device.name}</div>
+        <div className={classes.Title}>{props.device.name}</div>
+        <div className={classes.Switch}>
+          <Switch onChange={props.onToggleDeviceSwitch} checked={props.device.switch} />
         </div>
-        <div>Switcher</div>
       </div>
       <div>{deviceControls}</div>
     </div>
@@ -39,7 +40,8 @@ function Device(props) {
 
 Device.propTypes = {
   deviceId: PropTypes.string,
-  device: PropTypes.object
+  device: PropTypes.object,
+  onToggleDeviceSwitch: PropTypes.func
 };
 
 export default Device;

@@ -1,10 +1,10 @@
 import { FETCH_ROOMS_START, FETCH_ROOMS_SUCCESS, FETCH_ROOMS_FAILED } from "./../../store/rooms/rooms.actiontypes";
-import { getRooms } from "../../utils/api/rooms.api";
+import { getRoomsApi } from "../../utils/api/rooms.api";
 
 export const fetchRooms = () => dispatch => {
   dispatch(fetchRoomsStart());
 
-  getRooms()
+  getRoomsApi()
     .then(data => dispatch(fetchRoomsSuccess(data.data.rooms)))
     .catch(data => dispatch(fetchRoomsFailed(data.error)));
 };
