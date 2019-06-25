@@ -3,9 +3,13 @@
   font-size: 20px; /* 1 */
   height: 1em;
   width: 2em;
-  background: #bdb9a6;
+  background: #ddd;
   border-radius: 1em;
   cursor: pointer;
+
+  &.Checked {
+    background: #bdb9a6;
+  }
 
   input {
     position: absolute;
