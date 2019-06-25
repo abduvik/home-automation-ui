@@ -6,14 +6,20 @@ import {
   UPDATE_DEVICE_VALUE_SUCCESS,
   UPDATE_DEVICE_VALUE_FAILED
 } from "./devices.actiontypes";
-const initialState = {};
+
+const initialState = {
+  devices: {}
+};
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
     case FETCH_DEVICES_START:
       return { ...state };
     case FETCH_DEVICES_SUCCESS:
-      return { ...state };
+      return {
+        ...state,
+        devices: payload.devices
+      };
     case FETCH_DEVICES_FAILED:
       return { ...state };
     case UPDATE_DEVICE_VALUE_START:

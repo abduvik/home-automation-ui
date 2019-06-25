@@ -8,7 +8,7 @@ import asyncComponent from "./hoc/asyncComponent/asyncComponent";
 
 function App() {
   const AsyncRoomsDevices = asyncComponent(() =>
-    import("./containers/RoomsDashboard/Room/RoomDevices")
+    import("./containers/RoomsDashboard/RoomDevices/RoomDevices")
   );
   
   return (
