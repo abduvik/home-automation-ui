@@ -13,6 +13,13 @@ export default class Device extends Component {
     onControlValueChanged: PropTypes.func
   };
 
+  /**
+   * Event fired when the value of a control is changed
+   */
+  onControlValueChangedHandler = (controlId, newValue) => {
+    this.props.onControlValueChanged(this.props.deviceId, controlId, newValue);
+  };
+
   render() {
     if (!this.props.device) return;
 
@@ -22,19 +29,21 @@ export default class Device extends Component {
       this.props.device.controls &&
       !!Object.values(this.props.device.controls).length
     ) {
-      deviceControls = Object.entries(this.props.device.controls).map(device => {
-        const deviceId = device[0];
-        const deviceData = device[1];
-        return (
-          <div key={deviceId} className={classes.DeviceContainer}>
-            <ControlsSwitcher
-              deviceId={deviceId}
-              deviceData={deviceData}
-              onUpdateValue={this.props.onControlValueChanged}
-            />
-          </div>
-        );
-      });
+      deviceControls = Object.entries(this.props.device.controls).map(
+        device => {
+          const controlId = device[0];
+          const deviceData = device[1];
+          return (
+            <div key={controlId} className={classes.DeviceContainer}>
+              <ControlsSwitcher
+                controlId={controlId}
+                deviceData={deviceData}
+                onUpdateValue={this.onControlValueChangedHandler}
+              />
+            </div>
+          );
+        }
+      );
     }
 
     return (

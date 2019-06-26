@@ -11,38 +11,26 @@ export const controlsSwitcher = device => {};
 function ControlsSwitcher(props) {
   if (!props.deviceData) return null;
 
+  const controlProps = {
+    controlId: props.controlId,
+    onUpdateValue: props.onUpdateValue,
+    ...props.deviceData
+  };
+
   switch (props.deviceData.type) {
     case TEMPERATURE:
-      return (
-        <TemperatureControl
-          key={props.deviceId}
-          deviceId={props.deviceId}
-          {...props.deviceData}
-        />
-      );
+      return <TemperatureControl {...controlProps} />;
     case MODE:
-      return (
-        <ModeControl
-          key={props.deviceId}
-          deviceId={props.deviceId}
-          {...props.deviceData}
-        />
-      );
+      return <ModeControl {...controlProps} />;
     case SCALE:
-      return (
-        <ScaleControl
-          key={props.deviceId}
-          deviceId={props.deviceId}
-          {...props.deviceData}
-        />
-      );
+      return <ScaleControl {...controlProps} />;
     default:
       return null;
   }
 }
 
 ControlsSwitcher.propTypes = {
-  deviceId: PropTypes.string,
+  controlId: PropTypes.string,
   deviceData: PropTypes.object
 };
 

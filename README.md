@@ -135,3 +135,4 @@ Device control type must be added as export const in utils/deviceControls.types.
 Device control type should be added to the controlsswitcher component in 
   - /src/components/Device/ControlsSwitcher/ControlsSwitcher.js
 Device control render code should be added in components/Device/Controls
+Each control must call onUpdateValue prop when value is changed and the new value is passed to it

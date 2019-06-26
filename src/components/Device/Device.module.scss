@@ -14,6 +14,15 @@
   .Title {
     font-weight: bold;
     font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .DeviceContainer{
+    border: 1px solid #EEE;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 6px;
   }
 
   .Switch {
