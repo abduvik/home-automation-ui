@@ -82,7 +82,7 @@
         "6594218673": {
           "name": "Vane",
           "type": "mode",
-          "value": "cold",
+          "value": "middle",
           "options": {
             "top": {
               "name": "Top"
