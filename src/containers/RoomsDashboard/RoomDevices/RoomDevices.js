@@ -32,8 +32,18 @@ export class RoomDevices extends Component {
     }
   }
 
+  /**
+   * This for toggling the main switch of the device
+   */
   toggleDeviceSwitch = deviceId => {
     this.props.toggleDeviceSwitch(deviceId);
+  };
+
+  /**
+   * Evenet handler when a device control value changed
+   */
+  onControlValueChangedHandler = (deviceId, controlId, newValue) => {
+    console.log(deviceId, controlId, newValue);
   };
 
   render() {
@@ -55,6 +65,7 @@ export class RoomDevices extends Component {
                   deviceId={deviceId}
                   device={deviceData}
                   onToggleDeviceSwitch={() => this.toggleDeviceSwitch(deviceId)}
+                  onControlValueChanged={this.onControlValueChangedHandler}
                 />
               </div>
             );
