@@ -17,8 +17,6 @@ export default class TemperatureControl extends Component {
     onUpdateValue: PropTypes.func
   };
 
-
-
   onIncreaseTemperatureHandler = () => {
     if (this.props.max === this.props.value) return null;
     this.props.onUpdateValue(this.props.controlId, this.props.value + 1);
@@ -30,19 +28,22 @@ export default class TemperatureControl extends Component {
   };
 
   render() {
-    console.log(this.props);
+    if (!this.props.value || !this.props.unit) return null;
+
     return (
       <div className={classes.TemperatureControlContainer}>
         <div className={classes.Title}>{this.props.name}</div>
         <div className={classes.TemperatureControl}>
           <div className={classes.MinusBtn}>
-            <Button onClick={this.onDecreaseTemperatureHandler}>
+            <Button onClick={this.onDecreaseTemperatureHandler} data-test="decrease-temperature-btn">
               <FontAwesomeIcon icon={faMinus} />
             </Button>
           </div>
-          <div className={classes.Temperature}>{this.props.value}</div>
+          <div className={classes.Temperature} data-test="temperature">
+            {this.props.value} °{this.props.unit.toUpperCase()}
+          </div>
           <div className={classes.PlusBtn}>
-            <Button onClick={this.onIncreaseTemperatureHandler}>
+            <Button onClick={this.onIncreaseTemperatureHandler} data-test="increase-temperature-btn">
               <FontAwesomeIcon icon={faPlus} />
             </Button>
           </div>

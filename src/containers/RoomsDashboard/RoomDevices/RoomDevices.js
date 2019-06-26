@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import {
   fetchRoomDevices,
-  toggleDeviceSwitch
+  toggleDeviceSwitch,
+  updateDeviceControlValue
 } from "./../../../store/devices/devices.actions";
 import Device from "./../../../components/Device/Device";
 import { NavLink } from "react-router-dom";
@@ -43,7 +44,7 @@ export class RoomDevices extends Component {
    * Evenet handler when a device control value changed
    */
   onControlValueChangedHandler = (deviceId, controlId, newValue) => {
-    console.log(deviceId, controlId, newValue);
+    this.props.updateDeviceControlValue({ deviceId, controlId, newValue });
   };
 
   render() {
@@ -82,7 +83,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   fetchRoomDevices,
-  toggleDeviceSwitch
+  toggleDeviceSwitch,
+  updateDeviceControlValue
 };
 
 export default connect(

@@ -10,6 +10,16 @@ export const toggleDeviceSwitchApi = deviceId => {
     data: {
       deviceId
     }
-  }
+  };
+  return new Promise((resolve, reject) => resolve(response));
+};
+
+export const updateDeviceControlValueApi = payload => {
+  // This would be a PUT request for an actual server
+  const response = {
+    data: {
+      control: payload
+    }
+  };
   return new Promise((resolve, reject) => resolve(response));
 };

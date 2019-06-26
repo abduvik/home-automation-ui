@@ -2,9 +2,9 @@ import {
   FETCH_DEVICES_START,
   FETCH_DEVICES_SUCCESS,
   FETCH_DEVICES_FAILED,
-  UPDATE_DEVICE_VALUE_START,
-  UPDATE_DEVICE_VALUE_SUCCESS,
-  UPDATE_DEVICE_VALUE_FAILED,
+  UPDATE_DEVICE_CONTROL_VALUE_START,
+  UPDATE_DEVICE_CONTROL_VALUE_SUCCESS,
+  UPDATE_DEVICE_CONTROL_VALUE_FAILED,
   TOGGLE_DEVICE_SWITCH_START,
   TOGGLE_DEVICE_SWITCH_SUCCESS,
   TOGGLE_DEVICE_SWITCH_FAILED
@@ -49,11 +49,26 @@ export default (state = initialState, { type, payload }) => {
       return { ...state };
 
     // Controls Values
-    case UPDATE_DEVICE_VALUE_START:
+    case UPDATE_DEVICE_CONTROL_VALUE_START:
       return { ...state };
-    case UPDATE_DEVICE_VALUE_SUCCESS:
-      return { ...state };
-    case UPDATE_DEVICE_VALUE_FAILED:
+    case UPDATE_DEVICE_CONTROL_VALUE_SUCCESS:
+      return {
+        ...state,
+        devices: {
+          ...state.devices,
+          [payload.deviceId]: {
+            ...state.devices[payload.deviceId],
+            controls: {
+              ...state.devices[payload.deviceId].controls,
+              [payload.controlId]: {
+                ...state.devices[payload.deviceId].controls[payload.controlId],
+                value: payload.newValue
+              }
+            }
+          }
+        }
+      };
+    case UPDATE_DEVICE_CONTROL_VALUE_FAILED:
       return { ...state };
     default:
       return state;
