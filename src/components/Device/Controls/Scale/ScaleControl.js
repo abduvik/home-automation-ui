@@ -23,15 +23,20 @@ export default class ScaleControl extends Component {
 
   render() {
     return (
-      <input
-        className={classes.Range}
-        type="range"
-        min={this.props.min}
-        max={this.props.max}
-        step={this.props.step}
-        value={this.props.value}
-        onChange={this.onChangeScaleHandler}
-      />
+      <div className={classes.RangeContainer}>
+        <div className={classes.CurrentValue} data-test="current-value">
+          {this.props.value}
+        </div>
+        <input
+          className={classes.Range}
+          type="range"
+          min={this.props.min}
+          max={this.props.max}
+          step={this.props.step}
+          value={this.props.value}
+          onChange={this.onChangeScaleHandler}
+        />
+      </div>
     );
   }
 }

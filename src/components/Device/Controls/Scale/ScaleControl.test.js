@@ -18,6 +18,13 @@ describe("<ScaleControl />", () => {
     expect(wrapper).toBeTruthy();
   });
 
+  it("should display the current value", () => {
+    const wrapper = shallow(<ScaleControl {...scaleControlDummyProps} />);
+    expect(wrapper.find("[data-test='current-value']").text()).toBe(
+      scaleControlDummyProps.value.toString()
+    );
+  });
+
   it("should call onUpdateValue when the new value is not the same as current value", () => {
     const onUpdateValue = jest.fn();
     const wrapper = shallow(
@@ -27,7 +34,7 @@ describe("<ScaleControl />", () => {
     wrapper
       .find("input[type='range']")
       .simulate("change", { target: { value: 30 } });
-      
+
     expect(onUpdateValue).toHaveBeenCalledWith(
       scaleControlDummyProps.controlId,
       30

@@ -1,3 +1,13 @@
+.RangeContainer {
+  display: flex;
+}
+.CurrentValue {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: auto 10px auto 0;
+}
+
+/** Input Range Style Design **/
 @mixin rangetrack {
   background: #ddd;
   height: 1px;
