@@ -1,8 +1,8 @@
 .Switch {
   display: inline-block;
   font-size: 20px; /* 1 */
-  height: 1em;
-  width: 2em;
+  height: 1.5em;
+  width: 3em;
   background: #ddd;
   border-radius: 1em;
   cursor: pointer;
@@ -17,9 +17,9 @@
   }
 
   div {
-    height: 1em;
-    width: 1em;
-    border-radius: 1em;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 1.5em;
     background: #fff;
     box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
     -webkit-transition: all 300ms;
