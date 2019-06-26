@@ -1,0 +1,77 @@
+@mixin rangetrack {
+  background: #ddd;
+  height: 1px;
+  cursor: pointer;
+  border: 0;
+  box-shadow: 0px 1px 0px 1px #ddd;
+}
+
+@mixin rangethumb {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.15);
+  margin: 0;
+  outline: 0;
+
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    outline: 0;
+  }
+  &:active {
+    outline: 0;
+  }
+}
+
+@mixin rangethumb-focus {
+  // box-shadow:0px 1px 1px 1px orange;
+  background: yellow;
+}
+
+.Range {
+  background-color: transparent;
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 5px 0;
+  position: relative;
+  height: 50px;
+  outline: 0;
+
+  // Webkit Track
+  &::-webkit-slider-runnable-track {
+    @include rangetrack;
+  }
+  &::-webkit-slider-thumb {
+    @include rangethumb;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    -webkit-appearance: none;
+  }
+
+  // Mozilla Track
+  &::-moz-range-track {
+    @include rangetrack;
+  }
+  // Mozilla Thumb
+  &::-moz-range-thumb {
+    @include rangethumb;
+  }
+
+  // Microsoft Track
+  &::-ms-track {
+    @include rangetrack;
+  }
+  // Microsoft Thumb
+  &::-ms-thumb {
+    @include rangethumb;
+  }
+  // Microsoft Tooltip
+  &::-ms-tooltip {
+    display: none;
+  }
+}
