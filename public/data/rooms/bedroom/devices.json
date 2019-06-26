@@ -59,15 +59,15 @@
           "options": {
             "cold": {
               "name": "Cold",
-              "icon": ""
+              "icon": "snowflake"
             },
             "hot": {
               "name": "Hot",
-              "icon": ""
+              "icon": "sun"
             },
             "fan": {
               "name": "Fan",
-              "icon": ""
+              "icon": "fan"
             }
           }
         },

@@ -38,4 +38,12 @@
       }
     }
   }
+
+  .Icon {
+    font-size: 4rem;
+
+    @include mobile-view{
+      font-size: 3rem;
+    }
+  }
 }

@@ -42,7 +42,7 @@ export default class ModeControl extends Component {
           />
           <label htmlFor={radioId} className={classes.Label}>
             {option.icon ? (
-              <FontAwesomeIcon icon={{ prefix: "fa", iconName: option.icon }} />
+              <FontAwesomeIcon icon={{ prefix: "fa", iconName: option.icon }} className={classes.Icon} />
             ) : (
               <span className={classes.OptionText}>{option.name}</span>
             )}
