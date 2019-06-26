@@ -6,6 +6,8 @@ import { MODE } from "./../../../utils/deviceControls.types";
 import ModeControl from "../Controls/Mode/ModeControl";
 import ScaleControl from "../Controls/Scale/ScaleControl";
 
+import classes from "./ControlsSwitcher.module.scss";
+
 export const controlsSwitcher = device => {};
 
 function ControlsSwitcher(props) {
@@ -17,16 +19,32 @@ function ControlsSwitcher(props) {
     ...props.deviceData
   };
 
+  let control;
+
   switch (props.deviceData.type) {
     case TEMPERATURE:
-      return <TemperatureControl {...controlProps} />;
+      control = <TemperatureControl {...controlProps} />;
+      break;
     case MODE:
-      return <ModeControl {...controlProps} />;
+      control = <ModeControl {...controlProps} />;
+      break;
     case SCALE:
-      return <ScaleControl {...controlProps} />;
+      control = <ScaleControl {...controlProps} />;
+      break;
     default:
-      return null;
+      control = null;
   }
+
+  if (!control) return null;
+
+  return (
+    <div className={classes.TemperatureControlContainer}>
+      <div className={classes.Title} data-test="device-title">
+        {props.deviceData.name}
+      </div>
+      {control}
+    </div>
+  );
 }
 
 ControlsSwitcher.propTypes = {

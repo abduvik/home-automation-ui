@@ -31,22 +31,25 @@ export default class TemperatureControl extends Component {
     if (!this.props.value || !this.props.unit) return null;
 
     return (
-      <div className={classes.TemperatureControlContainer}>
-        <div className={classes.Title}>{this.props.name}</div>
-        <div className={classes.TemperatureControl}>
-          <div className={classes.MinusBtn}>
-            <Button onClick={this.onDecreaseTemperatureHandler} data-test="decrease-temperature-btn">
-              <FontAwesomeIcon icon={faMinus} />
-            </Button>
-          </div>
-          <div className={classes.Temperature} data-test="temperature">
-            {this.props.value} °{this.props.unit.toUpperCase()}
-          </div>
-          <div className={classes.PlusBtn}>
-            <Button onClick={this.onIncreaseTemperatureHandler} data-test="increase-temperature-btn">
-              <FontAwesomeIcon icon={faPlus} />
-            </Button>
-          </div>
+      <div className={classes.TemperatureControl}>
+        <div className={classes.MinusBtn}>
+          <Button
+            onClick={this.onDecreaseTemperatureHandler}
+            data-test="decrease-temperature-btn"
+          >
+            <FontAwesomeIcon icon={faMinus} />
+          </Button>
+        </div>
+        <div className={classes.Temperature} data-test="temperature">
+          {this.props.value} °{this.props.unit.toUpperCase()}
+        </div>
+        <div className={classes.PlusBtn}>
+          <Button
+            onClick={this.onIncreaseTemperatureHandler}
+            data-test="increase-temperature-btn"
+          >
+            <FontAwesomeIcon icon={faPlus} />
+          </Button>
         </div>
       </div>
     );
