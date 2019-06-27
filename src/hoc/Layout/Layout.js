@@ -5,6 +5,8 @@ import Header from "./../../containers/Header/Header";
 import SideDrawer from "../../containers/SideDrawer/SideDrawer";
 
 import classes from "./Layout.module.scss";
+import { closeErrorModal } from "./../../store/ui/ui.actions";
+import Modal from "./../../components/UI/Modal/Modal";
 
 export class Layout extends Component {
   static propTypes = {
@@ -16,6 +18,13 @@ export class Layout extends Component {
       <Fragment>
         <Header />
         <SideDrawer isOpen={this.props.isSideDrawerOpen} />
+        <Modal
+          data-test="errors-modal"
+          show={!!this.props.error}
+          onCloseModal={this.props.closeErrorModal}
+        >
+          {this.props.error && this.props.error.message}
+        </Modal>
         <main className={classes.Main}>{this.props.children}</main>
       </Fragment>
     );
@@ -23,7 +32,15 @@ export class Layout extends Component {
 }
 
 const mapStateToProps = state => ({
+  error: state.ui.error,
   isSideDrawerOpen: state.ui.openSideDrawer
 });
 
-export default connect(mapStateToProps)(Layout);
+const mapDispatchToProps = {
+  closeErrorModal
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Layout);

@@ -14,14 +14,23 @@ import {
   toggleDeviceSwitchApi,
   updateDeviceControlValueApi
 } from "../../utils/api/devices.api";
+import { showErrorModal } from "../ui/ui.actions";
 
 /** Fetching Room Devices Actions */
 export const fetchRoomDevices = roomId => dispatch => {
   dispatch(fetchRoomDevicesStart());
 
   getRoomDevicesApi(roomId)
-    .then(data => dispatch(fetchRoomDevicesSuccess(data.data.devices)))
-    .catch(data => dispatch(fetchRoomDevicesFailed(data.error)));
+    .then(response => dispatch(fetchRoomDevicesSuccess(response.data.devices)))
+    .catch(error => {
+      // This to mock an error response
+      const errorResponse = {
+        message: "Error while getting the devices data"
+      };
+      
+      dispatch(fetchRoomDevicesFailed(errorResponse));
+      dispatch(showErrorModal(errorResponse))
+    });
 };
 
 export const fetchRoomDevicesStart = () => ({
@@ -47,8 +56,17 @@ export const toggleDeviceSwitch = deviceId => dispatch => {
   dispatch(toggleDeviceSwitchStart());
 
   toggleDeviceSwitchApi(deviceId)
-    .then(data => dispatch(toggleDeviceSwitchSuccess(data.data.deviceId)))
-    .catch(data => dispatch(toggleDeviceSwitchFailed(data.error)));
+    .then(response => dispatch(toggleDeviceSwitchSuccess(response.data.deviceId)))
+    .catch(error => {
+
+      // This to mock an error response
+      const errorResponse = {
+        message: "Error while toggle the device switch"
+      };
+
+      dispatch(toggleDeviceSwitchFailed(errorResponse));
+      dispatch(showErrorModal(errorResponse))
+    });
 };
 
 export const toggleDeviceSwitchStart = () => ({
@@ -81,8 +99,16 @@ export const updateDeviceControlValue = controlData => dispatch => {
   dispatch(updateDeviceControlValueStart());
 
   updateDeviceControlValueApi(payload)
-    .then(data => dispatch(updateDeviceControlSuccess(data.data.control)))
-    .catch(data => dispatch(updateDeviceControlValueFailed(data.error)));
+    .then(response => dispatch(updateDeviceControlSuccess(response.data.control)))
+    .catch(error => {
+      // This to mock an error response
+      const errorResponse = {
+        message: "Error while updating the device value"
+      };
+
+      dispatch(updateDeviceControlValueFailed(errorResponse));
+      dispatch(showErrorModal(errorResponse))
+    });
 };
 
 export const updateDeviceControlValueStart = () => ({

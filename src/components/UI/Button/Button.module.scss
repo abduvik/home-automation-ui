@@ -1,5 +1,8 @@
+@import "../../../styles/utils/utils";
+
 .Button {
-  border: 2px solid #DDD;
+  font-family: $FONT_FAMILY;
+  border: 2px solid #ddd;
   background-color: transparent;
   border-radius: 0.375rem;
   padding: 0.5rem 1rem;
