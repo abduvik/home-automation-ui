@@ -2,7 +2,6 @@
 
 .Modal {
   position: fixed;
-  z-index: 500;
   background-color: white;
   width: 70%;
   box-shadow: 0px 0px 3px $DARK_SHADOW;
@@ -12,11 +11,12 @@
   top: 30%;
   opacity: 0;
   box-sizing: border-box;
-  transition: all 0.3s ease-out;
-  z-index: 1000;
+  transition: opacity 0.3s ease-out;
+  z-index: -1000;
 
   &.Show {
     opacity: 1;
+    z-index: 500;
   }
 
   .BtnContainer {
