@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow , mount} from "enzyme";
+import { shallow } from "enzyme";
 import { SideDrawer } from "./SideDrawer";
 
 import classes from "./SideDrawer.module.scss";
@@ -11,7 +11,12 @@ describe("<SideDrawer />", () => {
   });
 
   it("should have 'Open' className if 'isOpen' props is true", () => {
-    const wrapper = mount(<SideDrawer isOpen={true} />);
-    expect(wrapper.find('div').first().hasClass(classes.Open)).toBe(true);
+    const wrapper = shallow(<SideDrawer isOpen={true} />);
+    expect(
+      wrapper
+        .find("div")
+        .first()
+        .hasClass(classes.Open)
+    ).toBe(true);
   });
 });

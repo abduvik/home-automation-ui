@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { toggleSideDrawer } from "./../../store/ui/ui.actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,8 +23,18 @@ export class Header extends Component {
           <div className={classes.AppName}>Home Automation UI</div>
           <div className={classes.Navigation}>
             <Navigation>
-              <NavigationItem>Rooms</NavigationItem>
-              <NavigationItem>Github</NavigationItem>
+              <NavigationItem>
+                <NavLink to="/">Rooms</NavLink>
+              </NavigationItem>
+              <NavigationItem>
+                <a
+                  href="https://github.com/AbdelrahmanSE/home-automation-ui"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github
+                </a>
+              </NavigationItem>
             </Navigation>
           </div>
           <div className={classes.MenuBtn}>
@@ -41,4 +52,7 @@ const mapDispatchToProps = {
   toggleSideDrawer
 };
 
-export default connect(null, mapDispatchToProps)(Header);
+export default connect(
+  null,
+  mapDispatchToProps
+)(Header);

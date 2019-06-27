@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { NavLink } from 'react-router-dom';
 import { connect } from "react-redux";
 import Navigation from "../../components/Layout/Navigation/Navigation";
 import NavigationItem from "../../components/Layout/Navigation/NavigationItem/NavigationItem";
@@ -30,9 +31,19 @@ export class SideDrawer extends Component {
         <div className={classes.SideDrawer}>
           <div className={classes.Title}>Menu</div>
           <Navigation>
-            <NavigationItem>Rooms</NavigationItem>
-            <NavigationItem>Github</NavigationItem>
-          </Navigation>
+              <NavigationItem>
+                <NavLink to="/">Rooms</NavLink>
+              </NavigationItem>
+              <NavigationItem>
+                <a
+                  href="https://github.com/AbdelrahmanSE/home-automation-ui"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github
+                </a>
+              </NavigationItem>
+            </Navigation>
         </div>
       </div>
     );
