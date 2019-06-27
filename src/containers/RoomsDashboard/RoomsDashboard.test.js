@@ -27,4 +27,19 @@ describe("<RoomsDashboard />", () => {
     const wrapper = shallow(<RoomsDashboard rooms={rooms} />);
     expect(wrapper.find(Room)).toHaveLength(1);
   });
+
+  it("should go to the room page when the room box is clicked", () => {
+    // Mock the push to router function
+    const history = { push: jest.fn() };
+
+    const rooms = {
+      "living-room": { name: "Room Name", icon: "", deviceCount: 1 }
+    };
+    const wrapper = shallow(<RoomsDashboard rooms={rooms} history={history} />);
+
+    const roomCard = wrapper.find("[data-test='room-card-living-room']");
+    roomCard.simulate('click');
+
+    expect(history.push).toHaveBeenCalled();
+  });
 });
