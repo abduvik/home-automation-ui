@@ -17,7 +17,7 @@
     padding: 20px;
     box-sizing: border-box;
     min-width: 250px;
-    z-index: 100;
+    z-index: 1000;
     transform: translateX(-120%);
     transition: transform ease-in-out 300ms;
 
@@ -43,19 +43,6 @@
 
   @include mobile-view {
     &.Open {
-      &::after {
-        content: "";
-        background: #000;
-        width: 100vw;
-        height: 100vh;
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        opacity: 0.3;
-        z-index: 10;
-      }
-
       .SideDrawer {
         transform: translateX(0);
       }
