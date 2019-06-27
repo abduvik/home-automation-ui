@@ -1,0 +1,17 @@
+.Backdrop {
+  content: "";
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  z-index: 500;
+  display: none;
+
+  &.Show {
+    display: block;
+  }
+}
