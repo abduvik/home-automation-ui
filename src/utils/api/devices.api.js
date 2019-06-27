@@ -5,7 +5,7 @@ export const getRoomDevicesApi = roomId => {
 };
 
 export const toggleDeviceSwitchApi = deviceId => {
-  // This would be a PUT request for an actual server
+  // This would be a PATCH request for an actual server
   const response = {
     data: {
       deviceId
@@ -15,7 +15,7 @@ export const toggleDeviceSwitchApi = deviceId => {
 };
 
 export const updateDeviceControlValueApi = payload => {
-  // This would be a PUT request for an actual server
+  // This would be a PATCH request for an actual server
   const response = {
     data: {
       control: payload
