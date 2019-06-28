@@ -41,7 +41,9 @@ export default class TemperatureControl extends Component {
           </Button>
         </div>
         <div className={classes.Temperature} data-test="temperature">
-          {this.props.value} °{this.props.unit.toUpperCase()}
+          <div>
+            {this.props.value} °{this.props.unit.toUpperCase()}
+          </div>
         </div>
         <div className={classes.PlusBtn}>
           <Button

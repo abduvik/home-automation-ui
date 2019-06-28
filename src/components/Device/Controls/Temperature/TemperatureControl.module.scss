@@ -11,6 +11,7 @@
   }
 
   .Temperature {
+    display: flex;
     flex: 3;
     font-weight: bold;
     font-size: 3rem;
@@ -20,7 +21,10 @@
 
     @include mobile-view {
       font-size: 2rem;
-      line-height: 4rem;
+    }
+
+    div {
+      margin: auto;
     }
   }
 
